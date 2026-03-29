@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ locales[page.lang].dir or 'ltr' }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="{{ eleventy.generator }}"/>
+        <title>{{ title }}</title>
+
+        <!-- opengraph tags -->
+        <meta property="og:site_name" content="{{ meta.siteName }}" />
+        <meta property="og:title" content="{{ title }} | {{ meta.siteName }}" />
+        <meta property="og:type" content="website" />
+        {% if page.description %}
+            <meta property="og:description" content="{{ page.description }}"/>
+            {% else %}
+            <meta property="og:description" content="{{ locales[page.lang].siteDescription }}"/>
+        {% endif %}
+        <meta property="og:url" content="{{ meta.url }}{{ page.url }}" />
+        <meta property="og:locale" content="{{ page.lang }}" />
+        {% for link in page.url | locale_links %}
+        <meta property="og:image" content="{{ meta.url }}{{ locales[page.lang].ogImageUrl }}" />
+        {% endfor %}
+        <!-- opengraph tags -->
+        <link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.url }}{{ page.url }}">
+        {% for link in page.url | locale_links %}
+            <link rel="alternate" hreflang="{{ link.lang }}" href="{{ meta.url }}{{ page.url }}"/>
+        {% endfor %}
+        {# <link rel="icon" href="{{ '/favicon.png' | url }}"/> #}
+        <link href="{{ '/assets/css/main.css' | url }}" rel="stylesheet"/>
+    </head>
+    <body>
+
+        {% include 'layouts/partials/header.njk' %}
+        <main id='main'>
+        {{ content | safe }}
+        <main>
+        {% include 'layouts/partials/footer.njk' %}
+        
+    </body>
+</html>

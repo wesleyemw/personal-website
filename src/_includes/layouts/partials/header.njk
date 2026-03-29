@@ -1,0 +1,22 @@
+<a href="#main" class="sr-only">{{ locales[page.lang].skipText }}</a>
+<header>
+    <a href="{{ "/" | locale_url }}">antioquia</a>
+
+    <nav aria-label="locales[page.lang].ariaLabel">
+        <ul>
+            {# <li><a href="{{ '/posts/' | locale_url }}">posts</a></li>
+                                                                                                <li><a href="{{ '/about/' | locale_url }}">about</a></li> #}
+            {% for item in navigation[page.lang] %}
+                <li>
+                    <a href="{{ item.url | safe }}">{{ item.text }}</a>
+                </li>
+            {% endfor %}
+            <li>
+                <a href="/en/">EN</a>
+            </li>
+            <li>
+                <a href="/pt/">PT</a>
+            </li>
+        </ul>
+    </nav>
+</header>

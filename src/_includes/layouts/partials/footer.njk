@@ -1,0 +1,10 @@
+<footer>
+    <hr/>
+    {% for link in page.url | locale_links %}
+        {%- if not loop.first %}|{% endif %}
+        <p>
+            {{ locales[link.lang].availableText }}
+            <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{ locales[link.lang].label }}</a>
+        </p>
+    {% endfor %}
+</footer>

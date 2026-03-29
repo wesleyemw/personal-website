@@ -1,0 +1,79 @@
+:root {
+    --bg-color: #fff;
+    --color-link: hsl(205 100 50);
+}
+/*
+* 
+* Global 
+*
+*/
+
+body {
+    background-color: var(--bg-color);
+    font-family: system-ui;
+}
+
+hr {
+    border: none;
+    border-bottom: solid 0.1rem #333;
+}
+
+header, footer, main, article {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 75rem;
+}
+
+a {
+    text-underline-offset: .2em;
+    text-decoration-thickness: .05em;
+    color: var(--color-link);
+    &:link, &:visited {
+        color: var(--color-link);
+    }
+    &:hover, &:active {
+        opacity: 0.7;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+
+/*
+* 
+* Header 
+*
+*/
+
+header {
+    display: flex;
+}
+
+header nav {
+    margin-inline-start: auto;
+    margin-inline-end: 0;
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        li:not(:last-child) {
+            margin-inline-end: 1em;
+        }
+    }
+}
