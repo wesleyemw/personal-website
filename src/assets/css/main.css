@@ -1,3 +1,5 @@
+@import '_fonts.css';
+
 :root {
     --bg-color: #fff;
     --color-link: hsl(205 100 50);
@@ -11,6 +13,18 @@
 body {
     background-color: var(--bg-color);
     font-family: system-ui;
+}
+
+h1, h2, h3 {
+    font-family: 'ZtNature-Bold', sans-serif;
+    font-weight: inherit;
+}
+h4, h5, h6 {
+    font-family: 'ZtNature-Medium', sans-serif;
+    font-weight: inherit;
+}
+p, ul, ol {
+    font-family: 'Recursive', sans-serif;
 }
 
 hr {
