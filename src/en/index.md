@@ -1,12 +1,11 @@
 ---
-title: home
+title: Homepage
 layout: layouts/home
 tags: _home
 page:
-  title: home
+  title: Homepage
 ---
 
-![Antioquia theme image](../assets/images/banner-en.jpg)
+# Hey!
 
-little skeleton base theme for
-<a href="https://www.11ty.dev/" target="_blank"> eleventy</a >. demo available in [portuguese](/pt/) and [english](/en).
+This is my website. Welcome.
