@@ -1,30 +1,16 @@
 export default {
-  en: [
+  items: [
     {
       text: "home",
-      url: "/en/",
+      url: "/",
     },
-    { 
+    {
       text: "posts",
-      url: "/en/posts/"
+      url: "/posts/",
     },
     {
       text: "about",
-      url: "/en/about/"
+      url: "/about/",
     },
-  ],
-  pt: [
-    {
-      text: "inicio",
-      url: "/pt/",
-    },
-    {
-      text: "posts",
-      url: "/pt/posts/"
-    },
-    {
-      text: "sobre",
-      url: "/pt/about/"
-    }
   ],
 };

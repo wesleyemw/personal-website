@@ -1,25 +1,19 @@
-<a href="#main" class="sr-only">{{ locales[page.lang].skipText }}</a>
+<a href="#main" class="sr-only">{{ labels.skipText }}</a>
 <header>
-    <a href="{{ "/" | locale_url }}">
-        <img src="src/assets/images/logo.png" alt="Logo">
+    <a href="{{ "/" }}">
+        <img src="{{ meta.logoImg }}" alt="Logo">
         <span>Wesley Soares</span>
     </a>
 
-    <nav aria-label="locales[page.lang].ariaLabel">
+    <nav aria-label="labels.ariaLabel">
         <ul>
             {# <li><a href="{{ '/posts/' | locale_url }}">posts</a></li>
                                                                                                 <li><a href="{{ '/about/' | locale_url }}">about</a></li> #}
-            {% for item in navigation[page.lang] %}
+            {% for item in navigation.items %}
                 <li>
                     <a href="{{ item.url | safe }}">{{ item.text }}</a>
                 </li>
             {% endfor %}
-            <li>
-                <a href="/en/">EN</a>
-            </li>
-            <li>
-                <a href="/pt/">PT</a>
-            </li>
         </ul>
     </nav>
 </header>
