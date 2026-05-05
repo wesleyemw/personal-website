@@ -21,9 +21,10 @@
         <meta property="og:image" content="{{ meta.url }}{{ labels.ogImageUrl }}" />
         {% endfor %}
         <!-- opengraph tags -->
+
         <link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.url }}{{ page.url }}">
         
-        {# <link rel="icon" href="{{ '/favicon.png' | url }}"/> #}
+        <link rel="icon" href="{{ '/assets/images/favicon.svg' | url }}" type="image/svg+xml" />
         <link href="{{ '/assets/css/main.css' | url }}" rel="stylesheet"/>
     </head>
     <body>
