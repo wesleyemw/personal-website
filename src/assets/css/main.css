@@ -1,25 +1,104 @@
 @import '_fonts.css';
 @import '_header.css';
 
-:root {
-    --bg-color: #fff;
-    --color-link: hsl(205 100 50);
-}
 /*
 * 
 * Global 
 *
 */
 
+:root {
+    --color-main: #B94700;
+    --color-secondary: snow;    
+    --color-text: #222;
+
+    --color-link: blue;
+    --color-background-page: var(--color-secondary);
+    --color-text-link: blue;
+    --color-text-highlight: #00B5BA;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background-page: darkslategray;
+        --color-text: LightSteelBlue;
+        --color-text-link: PaleTurquoise;
+        --color-text-highlight: lavender;
+    }
+
+}
+
+/* @link https://utopia.fyi/type/calculator?c=360,16,1.2,1280,24,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.6667rem, 0.7053rem + -0.0483vw, 0.6944rem);
+  --step--1: clamp(0.8333rem, 0.7681rem + 0.2899vw, 1rem);
+  --step-0: clamp(1rem, 0.8043rem + 0.8696vw, 1.5rem);
+  --step-1: clamp(1.2rem, 0.7891rem + 1.8261vw, 2.25rem);
+  --step-2: clamp(1.44rem, 0.6828rem + 3.3652vw, 3.375rem);
+  --step-3: clamp(1.728rem, 0.4232rem + 5.7991vw, 5.0625rem);
+  --step-4: clamp(2.0736rem, -0.0865rem + 9.6003vw, 7.5938rem);
+  --step-5: clamp(2.4883rem, -0.9952rem + 15.4823vw, 11.3906rem);
+}
+
+/* @link https://utopia.fyi/space/calculator?c=360,16,1.2,1280,24,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --space-3xs: clamp(0.25rem, 0.2011rem + 0.2174vw, 0.375rem);
+  --space-2xs: clamp(0.5rem, 0.4022rem + 0.4348vw, 0.75rem);
+  --space-xs: clamp(0.75rem, 0.6033rem + 0.6522vw, 1.125rem);
+  --space-s: clamp(1rem, 0.8043rem + 0.8696vw, 1.5rem);
+  --space-m: clamp(1.5rem, 1.2065rem + 1.3043vw, 2.25rem);
+  --space-l: clamp(2rem, 1.6087rem + 1.7391vw, 3rem);
+  --space-xl: clamp(3rem, 2.413rem + 2.6087vw, 4.5rem);
+  --space-2xl: clamp(4rem, 3.2174rem + 3.4783vw, 6rem);
+  --space-3xl: clamp(6rem, 4.8261rem + 5.2174vw, 9rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.0543rem + 0.8696vw, 0.75rem);
+  --space-2xs-xs: clamp(0.5rem, 0.2554rem + 1.087vw, 1.125rem);
+  --space-xs-s: clamp(0.75rem, 0.4565rem + 1.3043vw, 1.5rem);
+  --space-s-m: clamp(1rem, 0.5109rem + 2.1739vw, 2.25rem);
+  --space-m-l: clamp(1.5rem, 0.913rem + 2.6087vw, 3rem);
+  --space-l-xl: clamp(2rem, 1.0217rem + 4.3478vw, 4.5rem);
+  --space-xl-2xl: clamp(3rem, 1.8261rem + 5.2174vw, 6rem);
+  --space-2xl-3xl: clamp(4rem, 2.0435rem + 8.6957vw, 9rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.2174rem + 3.4783vw, 3rem);
+
+}
+
+/* @link https://utopia.fyi/grid/calculator?c=360,16,1.2,1280,24,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --grid-max-width: 93.00rem;
+  --grid-gutter: var(--space-s-l, clamp(1rem, 0.3617rem + 2.8369vw, 3rem));
+  --grid-columns: 12;
+}
+
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+
 body {
-    background-color: var(--bg-color);
+    background-color: var(--color-background-page);
+    color: var(--color-text);
     font-family: system-ui, sans-serif;
     line-height: 1.5;
+    font-size: var(--step--1);
 }
 
 h1, h2, h3 {
     font-family: 'Recursive', sans-serif;
     font-weight: 720;
+    color: var(--color-main);
 }
 h4, h5, h6 {
     font-family: 'ZtNature-Medium', sans-serif;
@@ -28,6 +107,19 @@ h4, h5, h6 {
 p, ul, ol {
     font-family: 'ZtNature-Regular', sans-serif;
     max-width: 60ch;
+    font-size: var(--step--1);
+}
+small {
+    font-size: var(--step--2);
+}
+h1 {
+    font-size: var(--step-2);
+}
+h2 {
+    font-size: var(--step-1);
+}
+h3 {
+    font-size: var(--step-0);
 }
 ul:not([role='list']), ol:not([role='list']){
     /* list-style-position: inside;*/
@@ -49,9 +141,9 @@ header, footer, main, article {
 a {
     text-underline-offset: .2em;
     text-decoration-thickness: .05em;
-    color: var(--color-link);
+    color: var(--color-text-link);
     &:link, &:visited {
-        color: var(--color-link);
+        color: var(--color-text-link);
     }
     &:hover, &:active {
         opacity: 0.7;

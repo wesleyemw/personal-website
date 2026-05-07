@@ -1,15 +1,15 @@
 export default {
   items: [
+    // {
+    //   text: "/home",
+    //   url: "/",
+    // },
+    // {
+    //   text: "/posts",
+    //   url: "/posts/",
+    // },
     {
-      text: "home",
-      url: "/",
-    },
-    {
-      text: "posts",
-      url: "/posts/",
-    },
-    {
-      text: "about",
+      text: "/about",
       url: "/about/",
     },
   ],
