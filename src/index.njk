@@ -1,0 +1,32 @@
+---
+title: Homepage
+layout: layouts/home
+tags: _home
+page:
+  title: Homepage
+---
+
+<h1>Hello there!</h1>
+
+<p class="featured">Welcome. This is my personal website.</p>
+
+<p class="featured">                                                                                                                                                                                                                                  
+  I'm a webdesigner and front-end developer (originally graduated as an
+  architect). I was meaning to rebuild my portfolio, but, in the meantime, I
+  changed my mind. In this website I'm going to write about stuff, more
+  accidents, thoughts and maybe little coding here and there. But if you want to
+  talk about a specific web project, <a href="about/">drop me a line here</a>.
+</p>
+
+<h2>Latest</h2>
+<ul class="featured article-list">
+{%- for post in collections.post | reverse -%}
+  <li class="article-item">        
+        <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        <p class="article-meta">
+          <time datetime="{{ post.date }}">{{ post.date.toLocaleString('pt-BR', { year: 'numeric', month:
+            'numeric', day: 'numeric'}) }}</time>
+        </p>   
+  </li>
+{%- endfor -%}
+</ul>

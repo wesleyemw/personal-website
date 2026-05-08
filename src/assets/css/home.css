@@ -1,0 +1,19 @@
+/*
+* 
+* Home
+*
+*/
+
+.article-list {
+    .article-item {
+        h4 {
+            &::after {
+                content: '⟶';
+                margin-inline-start: 0.5rem;
+            }
+        }
+        h4, p {
+            margin: 0;
+        }
+    }
+}

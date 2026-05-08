@@ -8,6 +8,9 @@ export default function (eleventyConfig) {
   });
   // copy assets folder to dist/assets
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  // current year shortcode
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 }
 
 export const config = {

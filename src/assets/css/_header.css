@@ -1,9 +1,20 @@
+
+/*
+* 
+* Header 
+*
+*/
+
 header {
     display: flex;
     align-items: center;
     & > a {
         display: flex;
         align-items: center;
+        &:link {
+            color: var(--color-main);
+        }
+
         & > picture img {
             max-width: 3rem;
             width: auto;
@@ -14,4 +25,21 @@ header {
             margin-inline-start: 0.5rem;
         }
     }
+    nav {
+    margin-inline-start: auto;
+    margin-inline-end: 0;
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        li:not(:last-child) {
+            margin-inline-end: 1em;
+        }
+        a:link {
+            color: var(--color-main);
+        }
+    }
 }
+}
+
+
