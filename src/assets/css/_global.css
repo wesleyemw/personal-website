@@ -13,6 +13,11 @@
     --color-background-page: var(--color-secondary);
     --color-text-link: blue;
     --color-text-highlight: #00B5BA;
+
+    --font-content: 'ZtNature-Regular';
+    --font-heading-major: 'Recursive';
+    --font-heading-minor: 'ZtNature-Medium';
+    --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -87,24 +92,23 @@
 body {
     background-color: var(--color-background-page);
     color: var(--color-text);
-    font-family: system-ui, sans-serif;
+    font-family: var(--font-fallback);
     line-height: 1.5;
     font-size: var(--step--1);
 }
 
 h1, h2, h3 {
-    font-family: 'Recursive', sans-serif;
+    font-family: var(--font-heading-major), var(--font-fallback);
     font-weight: 720;
     color: var(--color-main);
 }
 h4, h5, h6 {
-    font-family: 'ZtNature-Medium', sans-serif;
+    font-family: var(--font-heading-minor), var(--font-fallback);
     font-weight: inherit;
 }
 p, ul, ol {
-    font-family: 'ZtNature-Regular', sans-serif;
+    font-family: var(--font-content), var(--font-fallback);
     max-width: 62ch;
-    font-size: var(--step--1);
 }
 small {
     font-size: var(--step--2);
@@ -139,6 +143,8 @@ header, footer, main, article, footer {
     margin: var(--space-m) var(--space-xl);
 }
 
+
+
 a {
     text-underline-offset: .2em;
     text-decoration-thickness: .05em;
@@ -148,6 +154,14 @@ a {
     }
     &:hover, &:active {
         opacity: 0.7;
+    }
+}
+
+p, li {
+    & > a {
+        &::after {
+            content: '\27f6';
+        }
     }
 }
 

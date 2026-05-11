@@ -18,3 +18,10 @@
     font-weight: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'ZtNature-Regular';
+    src: url('../fonts/ZTNature-Regular.woff2') format('woff2') ;
+    font-weight: normal;
+    font-display: swap;
+}
