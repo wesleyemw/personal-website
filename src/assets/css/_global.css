@@ -111,7 +111,7 @@ p, ul, ol {
     max-width: 62ch;
 }
 small {
-    font-size: var(--step--2);
+    font-size: 0.75em;
 }
 h1 {
     font-size: var(--step-2);
@@ -157,10 +157,17 @@ a {
     }
 }
 
-p, li {
+p {
     & > a {
         &::after {
-            content: '\27f6';
+            content: '\2b62';
+            margin-inline-start: 0.5rem;
+        }
+        &[href^="http"] {
+            &::after {
+            content: '\2b67';
+            margin-inline-start: 0.5rem;
+        }   
         }
     }
 }
