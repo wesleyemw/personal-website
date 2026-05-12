@@ -14,7 +14,7 @@
     --color-text-link: blue;
     --color-text-highlight: #00B5BA;
 
-    --font-content: 'ZtNature-Regular';
+    --font-content: 'Archivo-Regular';
     --font-heading-major: 'Recursive';
     --font-heading-minor: 'ZtNature-Medium';
     --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -101,10 +101,13 @@ h1, h2, h3 {
     font-family: var(--font-heading-major), var(--font-fallback);
     font-weight: 720;
     color: var(--color-main);
+    margin: 0;
 }
 h4, h5, h6 {
     font-family: var(--font-heading-minor), var(--font-fallback);
     font-weight: inherit;
+
+    margin: 0;
 }
 p, ul, ol {
     font-family: var(--font-content), var(--font-fallback);
@@ -116,14 +119,16 @@ small {
 h1 {
     font-size: var(--step-2);
     margin: 0;
-    margin-block-start: var(--space-m);
     margin-block-end: var(--space-l);
 }
 h2 {
     font-size: var(--step-1);
+    margin-block-end: var(--space-m);
 }
 h3 {
     font-size: var(--step-0);
+
+    margin-block-end: var(--space-s);
 }
 ul:not([role='list']), ol:not([role='list']){
     /* list-style-position: inside;*/
