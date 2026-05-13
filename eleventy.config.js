@@ -11,6 +11,9 @@ export default function (eleventyConfig) {
 
   // current year shortcode
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  //watch css changes
+  eleventyConfig.addWatchTarget("./assets/css/");
 }
 
 export const config = {

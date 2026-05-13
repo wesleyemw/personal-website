@@ -100,13 +100,13 @@ body {
 h1, h2, h3 {
     font-family: var(--font-heading-major), var(--font-fallback);
     font-weight: 720;
+    line-height: 1.25;
     color: var(--color-main);
     margin: 0;
 }
 h4, h5, h6 {
     font-family: var(--font-heading-minor), var(--font-fallback);
     font-weight: inherit;
-
     margin: 0;
 }
 p, ul, ol {
@@ -148,12 +148,9 @@ header, footer, main, article, footer {
     margin: var(--space-m) var(--space-xl);
 }
 
-
-
 a {
     text-underline-offset: .2em;
     text-decoration-thickness: .05em;
-    color: var(--color-text-link);
     &:link, &:visited {
         color: var(--color-text-link);
     }
@@ -165,14 +162,12 @@ a {
 p {
     & > a {
         &::after {
-            content: '\2b62';
-            margin-inline-start: 0.5rem;
+            content: '\0020\2b62';
         }
         &[href^="http"] {
             &::after {
-            content: '\2b67';
-            margin-inline-start: 0.5rem;
-        }   
+                content: '\0020\2b67';
+            }   
         }
     }
 }
