@@ -12,3 +12,13 @@
         }
     }
 }
+
+main {
+    hgroup {
+        display: flex;
+        align-items: baseline;
+        a {
+            margin-inline-start: var(--space-s);
+        }
+    }
+}

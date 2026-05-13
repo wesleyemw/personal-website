@@ -12,5 +12,9 @@ export default {
       text: "/about",
       url: "/about/",
     },
+    {
+      text: "/RSS",
+      url: "/feed.xml",
+    },
   ],
 };

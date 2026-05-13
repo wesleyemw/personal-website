@@ -1,4 +1,5 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import pluginRss from "@11ty/eleventy-plugin-rss";
 
 export default function (eleventyConfig) {
   // configure image plugin
@@ -14,6 +15,9 @@ export default function (eleventyConfig) {
 
   //watch css changes
   eleventyConfig.addWatchTarget("./assets/css/");
+
+  // rss plugin configuration
+  eleventyConfig.addPlugin(pluginRss);
 }
 
 export const config = {
