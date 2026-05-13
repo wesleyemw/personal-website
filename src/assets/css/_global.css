@@ -9,9 +9,8 @@
     --color-secondary: snow;    
     --color-text: #222;
 
-    --color-link: blue;
     --color-background-page: var(--color-secondary);
-    --color-text-link: blue;
+    --color-text-link: oklch(from var(--color-main) 57% c h);
     --color-text-highlight: #00B5BA;
 
     --font-content: 'Archivo-Regular';
@@ -145,7 +144,7 @@ header, footer, main, article, footer {
     /* margin: 0 auto;
     width: 100%;
     max-width: 75rem; */
-    margin: var(--space-m) var(--space-xl);
+    margin: var(--space-m) var(--space-m) var(--space-m) var(--space-xl);
 }
 
 a {

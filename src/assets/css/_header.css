@@ -11,10 +11,6 @@ header {
     & > a {
         display: flex;
         align-items: center;
-        &:link {
-            color: var(--color-main);
-        }
-
         & > picture img {
             max-width: 3rem;
             width: auto;
@@ -34,9 +30,6 @@ header {
         margin: 0;
         li:not(:last-child) {
             margin-inline-end: 1em;
-        }
-        a:link {
-            color: var(--color-main);
         }
     }
 }
