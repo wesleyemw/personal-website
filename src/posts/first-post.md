@@ -11,7 +11,7 @@ page:
 
 Photo by <a href="https://unsplash.com/@jonathanborba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jonathan Borba</a> on <a href="https://unsplash.com/photos/a-gentle-wave-washes-onto-a-sandy-beach-JQK137K59_I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-# First post
+# First post {.some-class}
 
 Excepteur apple exercitation esse culpa pariatur anim irure ut duis labore proident aliqua ut cupidatat aliquip velit duis ut anim nostrud nostrud sit island cupidatat adipiscing sunt house non sunt sit sunt ullamco library et exercitation eiusmod cupidatat culpa veniam reprehenderit tempor amet apple et aliquip est nisi dolore dolore.
 

@@ -1,7 +1,19 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginRss from "@11ty/eleventy-plugin-rss";
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
+import { IdAttributePlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
+  // markdown it
+  let markdownItOptions = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
+  const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
+  eleventyConfig.setLibrary("md", markdownLib);
+
   // configure image plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp", "jpeg"],
