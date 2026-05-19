@@ -14,6 +14,9 @@ export default function (eleventyConfig) {
   const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
   eleventyConfig.setLibrary("md", markdownLib);
 
+  // add attributes id to headers
+  eleventyConfig.addPlugin(IdAttributePlugin);
+
   // configure image plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp", "jpeg"],
