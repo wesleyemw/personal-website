@@ -6,6 +6,15 @@ layout: layouts/base.njk
   <header>
     <h1>{{ page.title | escape }}</h1>
     <time datetime="{{ page.date }}">{{ page.date | postDate }}</time>
+
+    {% if tags %}    
+    <ul>
+        {% for tag in tags %}
+        <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
   </header>
   {{ content | safe }}
   <footer></footer>

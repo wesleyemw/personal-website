@@ -1,0 +1,22 @@
+---
+layout: layouts/home.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+
+<h1>Tagged “{{ tag }}”</h1>
+
+<ol class="featured article-list">
+{% set taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
+  <li class="article-item">        
+        <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        <p class="article-meta">
+          <time datetime="{{ post.date }}">{{ post.date | postDate }}</time>
+        </p>   
+  </li>
+{% endfor %}
+</ol>
