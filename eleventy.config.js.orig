@@ -1,9 +1,12 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginRss from "@11ty/eleventy-plugin-rss";
+<<<<<<< HEAD
 import { DateTime } from "luxon";
+=======
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import { IdAttributePlugin } from "@11ty/eleventy";
+>>>>>>> feature/enhance-post-template
 
 export default function (eleventyConfig) {
   // markdown it

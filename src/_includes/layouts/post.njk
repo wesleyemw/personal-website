@@ -1,6 +1,12 @@
 ---
 layout: layouts/base.njk
 ---
+
 <article>
-{{ content | safe }}
+  <header>
+    <h1>{{ page.title | escape }}</h1>
+    <time datetime="{{ page.date }}">{{ page.date }}</time>
+  </header>
+  {{ content | safe }}
+  <footer></footer>
 </article>
