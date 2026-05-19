@@ -1,9 +1,9 @@
 ---
-title: Fist Post
+title: First Post
 layout: layouts/post
 tags: post
 page:
-  title: Fist Post
+  title: First Post
   description: first post
 ---
 
