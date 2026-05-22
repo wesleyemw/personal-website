@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // };
 
 const setTheme = (theme) => {
+  const btn = document.querySelector('button[data-toggle="theme"]');
+  btn.classList = "";
+  btn.classList.add(theme);
   document.body.dataset.theme = theme;
 };
 
