@@ -5,6 +5,7 @@
 */
 
 :root {
+    color-scheme: light dark;
     --color-main: light-dark(#B94700, #f2f2f2);
     --color-secondary: light-dark(snow, darkslategray);    
     --color-text: light-dark(#222, LightSteelBlue);
@@ -20,9 +21,11 @@
 }
 [data-theme="light"] {
     color-scheme: light;
+    transition: all 0.2s ease-in-out;
 }
 [data-theme="dark"] {
     color-scheme: dark;
+    transition: all 0.2s ease-in-out;
 }
 
 /* @link https://utopia.fyi/type/calculator?c=360,16,1.2,1280,24,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
