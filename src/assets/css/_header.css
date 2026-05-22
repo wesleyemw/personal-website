@@ -15,7 +15,7 @@ header {
             max-width: 3rem;
             width: auto;
             border-radius: 3rem;
-            border: solid 0.1rem rgb(0 0 0 / 0.5);
+            /* border: solid 0.1rem rgb(0 0 0 / 0.5); */
         }
         & > span {
             margin-inline-start: 0.5rem;
@@ -24,12 +24,30 @@ header {
     nav {
     margin-inline-start: auto;
     margin-inline-end: 0;
+    display: flex;
+    align-items: center;
     ul {
         list-style: none;
         display: flex;
         margin: 0;
         li:not(:last-child) {
             margin-inline-end: 1em;
+        }
+    }
+
+    button[data-toggle] {
+        border: none;
+        background: none;
+        margin-inline-start: 1em;
+        &[data-theme="light"] {
+            & > svg[data-theme="dark"] {
+                display: none;
+            }
+        }
+        &[data-theme="dark"] {
+            & > svg[data-theme="light"] {
+                display: none;
+            }
         }
     }
 }

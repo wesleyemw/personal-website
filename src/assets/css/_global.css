@@ -5,27 +5,24 @@
 */
 
 :root {
-    --color-main: #B94700;
-    --color-secondary: snow;    
-    --color-text: #222;
+    --color-main: light-dark(#B94700, #f2f2f2);
+    --color-secondary: light-dark(snow, darkslategray);    
+    --color-text: light-dark(#222, LightSteelBlue);
 
     --color-background-page: var(--color-secondary);
-    --color-text-link: oklch(from var(--color-main) 57% c h);
-    --color-text-highlight: #00B5BA;
+    --color-text-link: light-dark(oklch(from var(--color-main) 57% c h), PaleTurquoise);
+    --color-text-highlight: light-dark(#00B5BA, lavender);
 
     --font-content: 'Archivo-Regular';
     --font-heading-major: 'Recursive';
     --font-heading-minor: 'ZtNature-Medium';
     --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background-page: darkslategray;
-        --color-text: LightSteelBlue;
-        --color-text-link: PaleTurquoise;
-        --color-text-highlight: lavender;
-    }
-
+[data-theme="light"] {
+    color-scheme: light;
+}
+[data-theme="dark"] {
+    color-scheme: dark;
 }
 
 /* @link https://utopia.fyi/type/calculator?c=360,16,1.2,1280,24,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
