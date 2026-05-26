@@ -11,8 +11,10 @@ header {
     & > a {
         display: flex;
         align-items: center;
+
+        transform: translateX(calc(-0.5rem - var(--space-xl)));
         & > picture img {
-            max-width: 3rem;
+            max-width: var(--space-xl);
             width: auto;
             border-radius: 3rem;
             /* border: solid 0.1rem rgb(0 0 0 / 0.5); */
@@ -36,9 +38,7 @@ header {
             }
         }
     }
-
     button[data-toggle] {
-
         border: none;
         background-color: var(--color-text-link);
         margin-inline-start: 1em;
