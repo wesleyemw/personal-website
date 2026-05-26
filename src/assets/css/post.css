@@ -1,0 +1,12 @@
+/*
+* 
+* Post - Single
+*
+*/
+
+article.post-entry {
+    header {
+        display: block;
+        margin: 0;
+    }
+}
