@@ -10,7 +10,7 @@ layout: layouts/base.njk
     {% if tags %}    
     <ul>
         {% for tag in tags %}
-        <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+        <li><a href="/tags/{{ tag }}">#{{ tag }}</a></li>
         {% endfor %}
     </ul>
     {% endif %}

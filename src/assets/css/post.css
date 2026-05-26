@@ -6,7 +6,19 @@
 
 article.post-entry {
     header {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         margin: 0;
+        h1 {
+            margin-block-end: var(--space-s);
+            width: 100%;
+        }
+        ul {
+            display: flex;
+            margin-inline-start: var(--space-2xs);
+            li {
+                margin-inline-start: var(--space-3xs);
+            }
+        }
     }
 }
