@@ -1,0 +1,14 @@
+/*
+* 
+* Footer
+*
+*/
+footer {
+    /* position: sticky; */
+    overflow-x: hidden;
+    min-height: 15dvh;
+    width: 100dvw;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0.794 0.794"><circle cx=".397" cy=".397" r=".132" style="fill:currentcolor;stroke-width:.264583"/></svg>');
+    background-size: 3px 3px;
+    background-repeat: repeat;
+}
