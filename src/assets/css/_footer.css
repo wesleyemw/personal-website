@@ -3,12 +3,21 @@
 * Footer
 *
 */
+:root {
+    --footer-bg-color: light-dark(magenta, teal);
+}
 footer {
     /* position: sticky; */
     overflow-x: hidden;
     min-height: 15dvh;
     width: 100dvw;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0.794 0.794"><circle cx=".397" cy=".397" r=".132" style="fill:currentcolor;stroke-width:.264583"/></svg>');
-    background-size: 3px 3px;
+    /* background-color: light-dark(magenta, teal); */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1.852 1.852"><circle cx=".926" cy=".926" r=".132" style="fill:%23000;stroke:none;stroke-width:.264583;fill-opacity:.5"/></svg>');
+    color:var(--footer-bg-color);
+    background-size: 7px 7px;
     background-repeat: repeat;
+    & > .container {
+        background-color: transparent;
+        color: var(--color-main);
+    }
 }
