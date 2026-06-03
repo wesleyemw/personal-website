@@ -10,12 +10,7 @@ page:
 
 <p class="featured">Welcome. This is my personal website.</p>
 
-<p class="featured">                                                                                                                                                                                                                                  
-  I'm a webdesigner and front-end developer (originally graduated as an
-  architect). I was meaning to rebuild my portfolio, but, in the meantime, I
-  changed my mind. In this website I'm going to write about stuff, more
-  accidents, thoughts and maybe little coding here and there. But if you want to
-  talk about a specific web project, <a href="about/">drop me a line here</a>.
+<p class="featured">                                                                                                                                             I'm a webdesigner and front-end developer with a background in design. In this website I'm going to write about stuff, thoughts and maybe little coding here and there.
 </p>
 
 <hgroup>
@@ -24,7 +19,7 @@ page:
 <ul class="featured article-list">
 {%- for post in collections.post | reverse -%}
   <li class="article-item">        
-        <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>                                                                                    
         <p class="article-meta">
           <time datetime="{{ post.date }}">{{ post.date | postDate }}</time>
         </p>   

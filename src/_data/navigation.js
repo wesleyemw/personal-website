@@ -8,10 +8,10 @@ export default {
     //   text: "/posts",
     //   url: "/posts/",
     // },
-    {
-      text: "/about",
-      url: "/about/",
-    },
+    // {
+    //   text: "/about",
+    //   url: "/about/",
+    // },
     {
       text: "/RSS",
       url: "/feed.xml",
