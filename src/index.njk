@@ -10,14 +10,14 @@ page:
 
 <p class="featured">Welcome. This is my personal website.</p>
 
-<p class="featured">                                                                                                                                             I'm a webdesigner and front-end developer with a background in design. In this website I'm going to write about stuff, thoughts and maybe little coding here and there.
+<p class="featured">I'm a webdesigner and front-end developer with a background in design. In this website I'm going to write about stuff, thoughts and maybe little coding here and there.
 </p>
 
 <hgroup>
   <h2>Latest</h2><a href="/feed.xml">/RSS</a>
 </hgroup>
 <ul class="featured article-list">
-{%- for post in collections.post | reverse -%}
+{%- for post in collections.post | reverse | limit(3) -%}
   <li class="article-item">        
         <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>                                                                                    
         <p class="article-meta">
@@ -26,3 +26,7 @@ page:
   </li>
 {%- endfor -%}
 </ul>
+
+  <p><a href="/posts">All posts</a></p>
+<h2>Projects</h2>
+<p>Coming soon.</p>

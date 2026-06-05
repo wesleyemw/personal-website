@@ -35,8 +35,20 @@ export default function (eleventyConfig) {
   // rss plugin configuration
   eleventyConfig.addPlugin(pluginRss);
 
+  // format date to YY.MM.DD
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy.LL.dd");
+  });
+
+  // exclude filter
+  //https://cri.dev/posts/2024-09-21-how-to-exclude-tags-collection-filter-eleventy/
+  eleventyConfig.addFilter("exclude", (arr, exclude) =>
+    arr.filter((el) => el !== exclude),
+  );
+
+  // add a limit filter to an array
+  eleventyConfig.addFilter("limit", function (arr, limit) {
+    return arr.slice(0, limit);
   });
 }
 

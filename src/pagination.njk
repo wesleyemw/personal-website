@@ -9,7 +9,7 @@ permalink: /tags/{{ tag }}/
 
 <h1>#{{ tag }}</h1>
 
-<ol class="featured article-list">
+<ul class="featured article-list">
 {% set taglist = collections[ tag ] %}
 {% for post in taglist | reverse %}
   <li class="article-item">        
@@ -19,4 +19,4 @@ permalink: /tags/{{ tag }}/
         </p>   
   </li>
 {% endfor %}
-</ol>
+</ul>

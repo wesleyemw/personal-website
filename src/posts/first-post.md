@@ -1,7 +1,7 @@
 ---
 title: First Post
 layout: layouts/post
-tags: post, tag1, tag2
+tags: ["post", "tag1", "tag2"]
 page:
   title: First Post
   description: first post

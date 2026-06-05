@@ -9,7 +9,7 @@ layout: layouts/base.njk
 
     {% if tags %}    
     <ul>
-        {% for tag in tags %}
+        {% for tag in tags | exclude("post") %}
         <li><a href="/tags/{{ tag }}">#{{ tag }}</a></li>
         {% endfor %}
     </ul>
