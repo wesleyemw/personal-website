@@ -50,6 +50,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
   });
+
+  // add draft - set 'draft: true' anywhere on data cascade
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
+    }
+  });
 }
 
 export const config = {
