@@ -2,6 +2,7 @@
 title: Post 3
 layout: layouts/post
 tags: post
+draft: true
 page:
   title: post 3
   description: third post

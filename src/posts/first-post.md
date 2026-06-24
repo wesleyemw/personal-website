@@ -2,6 +2,7 @@
 title: First Post
 layout: layouts/post
 tags: ["post", "tag1", "tag2"]
+draft: true
 page:
   title: First Post
   description: first post
