@@ -19,7 +19,7 @@ page:
 <ul class="featured article-list">
 {%- for post in collections.post | reverse | limit(3) -%}
   <li class="article-item">        
-        <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>                                                                                    
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>                                                                                    
         <p class="article-meta">
           <time datetime="{{ post.date }}">{{ post.date | postDate }}</time>
         </p>   
@@ -27,6 +27,16 @@ page:
 {%- endfor -%}
 </ul>
 
-  <p><a href="/posts">All posts</a></p>
+<p><a href="/posts">All posts</a></p>
 <h2>Projects</h2>
-<p>Coming soon.</p>
+<ul class="featured article-list">
+{%- for project in collections.project | reverse | limit(3) -%}
+  <li class="article-item">        
+        <h3>{{ project.data.title }}</a></h3>                                                                                    
+        <p class="article-meta">
+          {# <time datetime="{{ project.date }}">{{ project.date | postDate }}</time> #}
+          <p>{{ project.page.description }} <br><a href="{{ project.data.info.url | escape }}" >{{ project.data.info.title }}</a></p>          
+        </p>   
+  </li>
+{%- endfor -%}
+</ul>
