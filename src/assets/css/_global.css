@@ -108,10 +108,12 @@ a {
 p {
     & > a {
         &::after {
+            font-family: Arial, Helvetica, sans-serif;
             content: '\0020\2b62';
         }
         &[href^="http"] {
             &::after {
+                font-family: Arial, Helvetica, sans-serif;
                 content: '\0020\2b67';
             }   
         }
