@@ -30,12 +30,14 @@ page:
 <p><a href="/posts">All posts</a></p>
 <h2>Projects</h2>
 <ul class="featured article-list">
-{%- for project in collections.project | reverse | limit(3) -%}
+{%- for project in projects | reverse | limit(3) -%}
   <li class="article-item">        
-        <h3>{{ project.data.title }}</a></h3>                                                                                    
+        <h3>{{ project.name }}</a></h3>     
+        
+        <img src="{{ project.img.url | escape }}" alt="{{ project.img.alt }}"/>                                                                          
         <p class="article-meta">
           {# <time datetime="{{ project.date }}">{{ project.date | postDate }}</time> #}
-          <p>{{ project.page.description }} <br><a href="{{ project.data.info.url | escape }}" >{{ project.data.info.title }}</a></p>          
+          <p>{{ project.description }} <br><a href="{{ project.url | escape }}" >repository</a></p>          
         </p>   
   </li>
 {%- endfor -%}
