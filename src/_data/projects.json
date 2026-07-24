@@ -1,7 +1,7 @@
 
 [{
         "name":"AroundMe App",
-        "description": "A PWA app to save offline maps and points of interests in it.",
+        "description": "A progressive web app (PWA) to save offline maps and points of interests in it.",
         "url": "https://github.com/wesleyemw/around-me-app",
         "img": {
                 "url": "./assets/images/img-map.jpg",        

@@ -29,7 +29,7 @@ page:
 
 <p><a href="/posts">All posts</a></p>
 <h2>Projects</h2>
-<ul class="featured article-list">
+<ul class="featured article-list projects">
 {%- for project in projects | reverse | limit(3) -%}
   <li class="article-item">        
         <h3>{{ project.name }}</a></h3>     
@@ -37,7 +37,9 @@ page:
         <img src="{{ project.img.url | escape }}" alt="{{ project.img.alt }}"/>                                                                          
         <p class="article-meta">
           {# <time datetime="{{ project.date }}">{{ project.date | postDate }}</time> #}
-          <p>{{ project.description }} <br><a href="{{ project.url | escape }}" >repository</a></p>          
+          <span class="year">{{ project.year }}</span></br>
+          <span>{{ project.description }} </span></br>
+          <a href="{{ project.url | escape }}" >repository</a>         
         </p>   
   </li>
 {%- endfor -%}
