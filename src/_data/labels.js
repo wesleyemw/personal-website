@@ -1,9 +1,9 @@
 export default {
   dir: "ltr",
   label: "english",
-  availableText: "this page is also available in ",
-  siteDescription: "A minimal theme skeleton  multilingual for Eleventy.",
-  ogImageUrl: "/assets/images/opengraph-en.jpg",
+  siteDescription:
+    "Personal website of Wesley Soares, a webdesigner and front-end developer",
+  ogImageUrl: "/assets/images/opengraph-en.png",
   ariaLabel: "Primary",
   ariaChange: "Change language",
   skipText: "Go to main content",

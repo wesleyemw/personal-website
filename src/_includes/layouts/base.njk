@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}" dir="{{ labels.dir or 'ltr' }}">
+<html lang="{{ labels.shorthand }}" dir="{{ labels.dir or 'ltr' }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="{{ eleventy.generator }}"/>
+        <meta name="color-scheme" content="light dark" />
+        <meta name="description"  content="{{ labels.siteDescription }}" />
         <title>{{ title }}</title>
 
         <!-- opengraph tags -->
         <meta property="og:site_name" content="{{ meta.siteName }}" />
         <meta property="og:title" content="{{ title }} | {{ meta.siteName }}" />
         <meta property="og:type" content="website" />
-        {% if page.description %}
-            <meta property="og:description" content="{{ page.description }}"/>
-            {% else %}
-            <meta property="og:description" content="{{ labels.siteDescription }}"/>
-        {% endif %}
+        <meta property="og:description" content="{{ labels.siteDescription }}"/>
         <meta property="og:url" content="{{ meta.url }}{{ page.url }}" />
-        <meta property="og:locale" content="{{ page.lang }}" />
+        <meta property="og:locale" content="{{ labels.locale }}" />
         {% for link in page.url %}
         <meta property="og:image" content="{{ meta.url }}{{ labels.ogImageUrl }}" />
         {% endfor %}
         <!-- opengraph tags -->
 
-        <link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.url }}{{ page.url }}">
+        <link rel="alternate" hreflang="{{ labels.shorthand }}" href="{{ meta.url }}{{ page.url }}">
         
         <link rel="icon" href="{{ '/assets/images/favicon.svg' | url }}" type="image/svg+xml" />
         <link href="{{ '/assets/css/main.css' | url }}" rel="stylesheet"/>
