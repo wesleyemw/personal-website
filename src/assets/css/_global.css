@@ -72,7 +72,7 @@ h2 {
 }
 h3 {
     font-size: var(--step-0);
-
+    margin-block-start: var(--space-s);
     margin-block-end: var(--space-s);
 }
 ul:not([role='list']), ol:not([role='list']){

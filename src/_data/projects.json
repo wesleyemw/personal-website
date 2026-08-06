@@ -2,13 +2,13 @@
 [{
         "name":"Antioquia",
         "description": "A multilingual 11ty skeleton theme.",
-        "url": "https://github.com/wesleyemw/around-me-app",
+        "url": "https://github.com/wesleyemw/antioquia",
         "img": {
-                "url": "./assets/images/img-map.jpg",        
+                "url": "https://github.com/wesleyemw/antioquia/raw/main/src/assets/images/opengraph-pt.jpg",        
                 "alt": "Map rendering of a location."
                 },
-        "status": "active",
-        "year": "2025 - current"
+        "status": "wip",
+        "year": "2025"
 },
 {
         "name":"AroundMe App",
@@ -18,7 +18,7 @@
                 "url": "./assets/images/img-map.jpg",        
                 "alt": "Map rendering of a location."
                 },
-        "status": "active",
-        "year": "2025 - current"
+        "status": "wip",
+        "year": "2025"
 }
 ]

@@ -5,27 +5,38 @@
 */
 
 .article-list {
-    .article-item {
-        &:not(:first-child) {
-            margin-block-start: var(--space-s);
-        }
-        h4, p {
-            margin: 0;
-            font-size: var(--step-0);
-        }
-    }
+
     &.projects {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-s);
         .article-item {
+            h3 {
+                margin-block-start: 0;
+            }
+            picture > img {
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+            }
             span.status, span.year {
                 font-size: var(--step--1);
                 font-variant: small-caps;
             }
             span.status {
-                padding-left: 0.5em;
+                margin-inline-start: 0.5em;
+                padding: 0.25rem;
+                border: solid 0.1rem var(--color-text-highlight);
             }
+        }
+    }
+    .article-item {
+        /* &:not(:first-child) {
+            margin-block-start: var(--space-s);
+        } */
+        h4, p {
+            margin: 0;
+            font-size: var(--step-0);
         }
     }
 }
