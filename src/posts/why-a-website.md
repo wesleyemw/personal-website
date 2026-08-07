@@ -3,6 +3,7 @@ title: Why a website
 layout: layouts/post
 tags: ["post", "meta", "eleventy"]
 draft: false
+date: 2026-06-25
 page:
   title: Why a website
   description: Why maintain a personal website in 2026?
